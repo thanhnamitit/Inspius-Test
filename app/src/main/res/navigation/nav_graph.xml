@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/home_fragment">
+
+    <fragment
+        android:id="@+id/home_fragment"
+        android:name="com.thanhnamitit.test.presentation.screen.home.HomeFragment"
+        android:label="@string/label_home_fragment" />
+
+    <fragment
+        android:id="@+id/team_detail_fragment"
+        android:name="com.thanhnamitit.test.presentation.screen.teams.detail.TeamDetailFragment">
+        <argument
+            android:name="team"
+            app:argType="com.thanhnamitit.test.domain.model.Team"
+            app:nullable="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/match_detail_fragment"
+        android:name="com.thanhnamitit.test.presentation.screen.matches.detail.MatchDetailFragment">
+        <argument
+            android:name="match"
+            app:argType="com.thanhnamitit.test.domain.model.Match"
+            app:nullable="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/player_fragment"
+        android:name="com.thanhnamitit.test.presentation.screen.player.PlayerFragment">
+        <argument
+            android:name="url"
+            app:argType="string"
+            app:nullable="false" />
+    </fragment>
+</navigation>
